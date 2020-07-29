@@ -1,4 +1,4 @@
-package com.dreamcold.dreamcold.dao;
+package com.dreamcold.dreamcold.entity;
 
 import java.sql.Timestamp;
 
