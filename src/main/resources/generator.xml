@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
 <generatorConfiguration>  
     <!-- 数据库驱动包位置 -->  
-    <classPathEntry location="D:\programe\eclipse-java\myworkspace\DataSharePlatform-java\mysql-connector-java-5.0.8-bin .jar" />   
+    <classPathEntry location="D:\programe\eclipse-java\myworkspace\DataSharePlatform-java\src\main\resources\mysql-connector-java-5.0.8-bin .jar" />   
     <!-- <classPathEntry location="C:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" />-->  
     <context id="DB2Tables" targetRuntime="MyBatis3">  
         <commentGenerator>  
@@ -25,7 +25,7 @@
             <property name="enableSubPackages" value="true" />  
         </sqlMapGenerator>  
         <!-- 生成DAO的包名和位置 -->  
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dreamcold.dreamcold.dao" targetProject="D:\programe\eclipse-java\myworkspace\DataSharePlatform-java\src\main\java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dreamcold.dreamcold.mapper" targetProject="D:\programe\eclipse-java\myworkspace\DataSharePlatform-java\src\main\java">
             <property name="enableSubPackages" value="true" />  
         </javaClientGenerator>  
 		

@@ -1,7 +1,10 @@
-package com.dreamcold.dreamcold.dao;
+package com.dreamcold.dreamcold.mapper;
 
 import com.dreamcold.dreamcold.entity.AssetStatus;
+import org.apache.ibatis.annotations.Mapper;
 
+
+@Mapper
 public interface AssetStatusMapper {
     int deleteByPrimaryKey(Integer id);
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.dreamcold.dreamcold.dao.AssetTradingMapper">
+<mapper namespace="com.dreamcold.dreamcold.mapper.AssetTradingMapper">
   <resultMap id="BaseResultMap" type="com.dreamcold.dreamcold.entity.AssetTrading">
     <id column="ID" jdbcType="INTEGER" property="id" />
     <result column="OWNER" jdbcType="VARCHAR" property="owner" />
