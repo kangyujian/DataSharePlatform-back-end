@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dreamcold.dreamcold.dao.AssetTradingMapper">
+  <resultMap id="BaseResultMap" type="com.dreamcold.dreamcold.entity.AssetTrading">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="OWNER" jdbcType="VARCHAR" property="owner" />
+    <result column="USERS" jdbcType="VARCHAR" property="users" />
+    <result column="TRADETIME" jdbcType="VARCHAR" property="tradetime" />
+    <result column="DATATHEME" jdbcType="VARCHAR" property="datatheme" />
+    <result column="DATAVALUE" jdbcType="VARCHAR" property="datavalue" />
+    <result column="DATASIZE" jdbcType="VARCHAR" property="datasize" />
+    <result column="ISONLINE" jdbcType="BIT" property="isonline" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ID, OWNER, USERS, TRADETIME, DATATHEME, DATAVALUE, DATASIZE, ISONLINE
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from assettrading
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from assettrading
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.dreamcold.dreamcold.entity.AssetTrading">
+    insert into assettrading (ID, OWNER, USERS, 
+      TRADETIME, DATATHEME, DATAVALUE, 
+      DATASIZE, ISONLINE)
+    values (#{id,jdbcType=INTEGER}, #{owner,jdbcType=VARCHAR}, #{users,jdbcType=VARCHAR}, 
+      #{tradetime,jdbcType=VARCHAR}, #{datatheme,jdbcType=VARCHAR}, #{datavalue,jdbcType=VARCHAR}, 
+      #{datasize,jdbcType=VARCHAR}, #{isonline,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dreamcold.dreamcold.entity.AssetTrading">
+    insert into assettrading
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="owner != null">
+        OWNER,
+      </if>
+      <if test="users != null">
+        USERS,
+      </if>
+      <if test="tradetime != null">
+        TRADETIME,
+      </if>
+      <if test="datatheme != null">
+        DATATHEME,
+      </if>
+      <if test="datavalue != null">
+        DATAVALUE,
+      </if>
+      <if test="datasize != null">
+        DATASIZE,
+      </if>
+      <if test="isonline != null">
+        ISONLINE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="owner != null">
+        #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="users != null">
+        #{users,jdbcType=VARCHAR},
+      </if>
+      <if test="tradetime != null">
+        #{tradetime,jdbcType=VARCHAR},
+      </if>
+      <if test="datatheme != null">
+        #{datatheme,jdbcType=VARCHAR},
+      </if>
+      <if test="datavalue != null">
+        #{datavalue,jdbcType=VARCHAR},
+      </if>
+      <if test="datasize != null">
+        #{datasize,jdbcType=VARCHAR},
+      </if>
+      <if test="isonline != null">
+        #{isonline,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dreamcold.dreamcold.entity.AssetTrading">
+    update assettrading
+    <set>
+      <if test="owner != null">
+        OWNER = #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="users != null">
+        USERS = #{users,jdbcType=VARCHAR},
+      </if>
+      <if test="tradetime != null">
+        TRADETIME = #{tradetime,jdbcType=VARCHAR},
+      </if>
+      <if test="datatheme != null">
+        DATATHEME = #{datatheme,jdbcType=VARCHAR},
+      </if>
+      <if test="datavalue != null">
+        DATAVALUE = #{datavalue,jdbcType=VARCHAR},
+      </if>
+      <if test="datasize != null">
+        DATASIZE = #{datasize,jdbcType=VARCHAR},
+      </if>
+      <if test="isonline != null">
+        ISONLINE = #{isonline,jdbcType=BIT},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dreamcold.dreamcold.entity.AssetTrading">
+    update assettrading
+    set OWNER = #{owner,jdbcType=VARCHAR},
+      USERS = #{users,jdbcType=VARCHAR},
+      TRADETIME = #{tradetime,jdbcType=VARCHAR},
+      DATATHEME = #{datatheme,jdbcType=VARCHAR},
+      DATAVALUE = #{datavalue,jdbcType=VARCHAR},
+      DATASIZE = #{datasize,jdbcType=VARCHAR},
+      ISONLINE = #{isonline,jdbcType=BIT}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

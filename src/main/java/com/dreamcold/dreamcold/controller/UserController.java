@@ -14,12 +14,5 @@ import java.util.List;
 public class UserController {
 
 
-    @Autowired
-    private UserMapper usermapper;
 
-    @RequestMapping("/user")
-    public List<User> getAllUser(){
-        List<User> users=usermapper.findAll();
-        return users;
-    }
 }

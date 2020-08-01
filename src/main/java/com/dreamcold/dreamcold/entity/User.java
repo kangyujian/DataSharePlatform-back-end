@@ -1,16 +1,11 @@
 package com.dreamcold.dreamcold.entity;
 
 public class User {
-
     private Integer id;
-    private String userName;
-    private String passWord;
 
-    public User(Integer id, String userName, String passWord) {
-        this.id = id;
-        this.userName = userName;
-        this.passWord = passWord;
-    }
+    private String username;
+
+    private String password;
 
     public Integer getId() {
         return id;
@@ -20,19 +15,19 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
-    public String getPassWord() {
-        return passWord;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
     }
 }

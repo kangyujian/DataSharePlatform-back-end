@@ -1,44 +1,27 @@
 package com.dreamcold.dreamcold.entity;
 
-import java.sql.Timestamp;
-
 public class AssetTrading {
-    private int id;
+    private Integer id;
+
     private String owner;
+
     private String users;
-    private Timestamp tradeTime;
-    private String dataTheme;
-    private String dataValue;
-    private String dataSize;
-    private boolean isonline;
 
-    public AssetTrading(int id, String owner, String users, Timestamp tradeTime, String dataTheme, String dataValue, String dataSize, boolean isonline) {
-        this.id = id;
-        this.owner = owner;
-        this.users = users;
-        this.tradeTime = tradeTime;
-        this.dataTheme = dataTheme;
-        this.dataValue = dataValue;
-        this.dataSize = dataSize;
-        this.isonline = isonline;
-    }
+    private String tradetime;
 
-    public AssetTrading(String owner, String users, Timestamp tradeTime, String dataTheme, String dataValue, String dataSize, boolean isonline) {
-        this.owner = owner;
-        this.users = users;
-        this.tradeTime = tradeTime;
-        this.dataTheme = dataTheme;
-        this.dataValue = dataValue;
-        this.dataSize = dataSize;
-        this.isonline = isonline;
-    }
+    private String datatheme;
 
+    private String datavalue;
 
-    public int getId() {
+    private String datasize;
+
+    private Boolean isonline;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -47,7 +30,7 @@ public class AssetTrading {
     }
 
     public void setOwner(String owner) {
-        this.owner = owner;
+        this.owner = owner == null ? null : owner.trim();
     }
 
     public String getUsers() {
@@ -55,46 +38,46 @@ public class AssetTrading {
     }
 
     public void setUsers(String users) {
-        this.users = users;
+        this.users = users == null ? null : users.trim();
     }
 
-    public Timestamp getTradeTime() {
-        return tradeTime;
+    public String getTradetime() {
+        return tradetime;
     }
 
-    public void setTradeTime(Timestamp tradeTime) {
-        this.tradeTime = tradeTime;
+    public void setTradetime(String tradetime) {
+        this.tradetime = tradetime == null ? null : tradetime.trim();
     }
 
-    public String getDataTheme() {
-        return dataTheme;
+    public String getDatatheme() {
+        return datatheme;
     }
 
-    public void setDataTheme(String dataTheme) {
-        this.dataTheme = dataTheme;
+    public void setDatatheme(String datatheme) {
+        this.datatheme = datatheme == null ? null : datatheme.trim();
     }
 
-    public String getDataValue() {
-        return dataValue;
+    public String getDatavalue() {
+        return datavalue;
     }
 
-    public void setDataValue(String dataValue) {
-        this.dataValue = dataValue;
+    public void setDatavalue(String datavalue) {
+        this.datavalue = datavalue == null ? null : datavalue.trim();
     }
 
-    public String getDataSize() {
-        return dataSize;
+    public String getDatasize() {
+        return datasize;
     }
 
-    public void setDataSize(String dataSize) {
-        this.dataSize = dataSize;
+    public void setDatasize(String datasize) {
+        this.datasize = datasize == null ? null : datasize.trim();
     }
 
-    public boolean isIsonline() {
+    public Boolean getIsonline() {
         return isonline;
     }
 
-    public void setIsonline(boolean isonline) {
+    public void setIsonline(Boolean isonline) {
         this.isonline = isonline;
     }
 }

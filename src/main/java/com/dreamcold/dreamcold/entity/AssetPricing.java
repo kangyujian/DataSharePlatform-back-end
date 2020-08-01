@@ -1,79 +1,65 @@
 package com.dreamcold.dreamcold.entity;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class AssetPricing {
-    private  int id;
-    private String dataChecker;
-    private Timestamp dataPriceDecideTime;
-    private String dataSize;
-    private String dataValue;
-    private boolean isOnline;
+    private Integer id;
 
-    public AssetPricing(int id, String dataChecker, Timestamp dataPriceDecideTime, String dataSize, String dataValue, boolean isOnline) {
-        this.id = id;
-        this.dataChecker = dataChecker;
-        this.dataPriceDecideTime = dataPriceDecideTime;
-        this.dataSize = dataSize;
-        this.dataValue = dataValue;
-        this.isOnline = isOnline;
-    }
+    private String datacheacker;
 
-    public AssetPricing(String dataChecker, Timestamp dataPriceDecideTime, String dataSize, String dataValue, boolean isOnline) {
-        this.dataChecker = dataChecker;
-        this.dataPriceDecideTime = dataPriceDecideTime;
-        this.dataSize = dataSize;
-        this.dataValue = dataValue;
-        this.isOnline = isOnline;
-    }
+    private Date datapricedecidetime;
 
-    public int getId() {
+    private String datasize;
+
+    private String datavalue;
+
+    private Boolean isonline;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getDataChecker() {
-        return dataChecker;
+    public String getDatacheacker() {
+        return datacheacker;
     }
 
-    public void setDataChecker(String dataChecker) {
-        this.dataChecker = dataChecker;
+    public void setDatacheacker(String datacheacker) {
+        this.datacheacker = datacheacker == null ? null : datacheacker.trim();
     }
 
-    public Timestamp getDataPriceDecideTime() {
-        return dataPriceDecideTime;
+    public Date getDatapricedecidetime() {
+        return datapricedecidetime;
     }
 
-    public void setDataPriceDecideTime(Timestamp dataPriceDecideTime) {
-        this.dataPriceDecideTime = dataPriceDecideTime;
+    public void setDatapricedecidetime(Date datapricedecidetime) {
+        this.datapricedecidetime = datapricedecidetime;
     }
 
-    public String getDataSize() {
-        return dataSize;
+    public String getDatasize() {
+        return datasize;
     }
 
-    public void setDataSize(String dataSize) {
-        this.dataSize = dataSize;
+    public void setDatasize(String datasize) {
+        this.datasize = datasize == null ? null : datasize.trim();
     }
 
-    public String getDataValue() {
-        return dataValue;
+    public String getDatavalue() {
+        return datavalue;
     }
 
-    public void setDataValue(String dataValue) {
-        this.dataValue = dataValue;
+    public void setDatavalue(String datavalue) {
+        this.datavalue = datavalue == null ? null : datavalue.trim();
     }
 
-    public boolean isOnline() {
-        return isOnline;
+    public Boolean getIsonline() {
+        return isonline;
     }
 
-    public void setOnline(boolean online) {
-        isOnline = online;
+    public void setIsonline(Boolean isonline) {
+        this.isonline = isonline;
     }
 }
-
-

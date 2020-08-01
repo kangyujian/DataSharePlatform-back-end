@@ -1,102 +1,85 @@
 package com.dreamcold.dreamcold.entity;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class AssetStatus {
-    private  int id;
+    private Integer id;
+
     private String owner;
-    private Timestamp dataStartTime;
-    private String dataTheme;
-    private String dataSize;
-    private String blockVersion;
-    private String dataBlockId;
-    private boolean isOnline;
 
-    public AssetStatus(int id, String owner, Timestamp dataStartTime, String dataTheme, String dataSize, String blockVersion, String dataBlockId, boolean isOnline) {
-        this.id = id;
-        this.owner = owner;
-        this.dataStartTime = dataStartTime;
-        this.dataTheme = dataTheme;
-        this.dataSize = dataSize;
-        this.blockVersion = blockVersion;
-        this.dataBlockId = dataBlockId;
-        this.isOnline = isOnline;
-    }
+    private Date datastarttime;
 
-    public AssetStatus(String owner, Timestamp dataStartTime, String dataTheme, String dataSize, String blockVersion, String dataBlockId, boolean isOnline) {
-        this.owner = owner;
-        this.dataStartTime = dataStartTime;
-        this.dataTheme = dataTheme;
-        this.dataSize = dataSize;
-        this.blockVersion = blockVersion;
-        this.dataBlockId = dataBlockId;
-        this.isOnline = isOnline;
-    }
+    private String datatheme;
 
+    private String datasize;
 
-    public int getId() {
+    private String blockversion;
+
+    private String datainbloackid;
+
+    private Boolean isonline;
+
+    public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getOwner() {
         return owner;
     }
 
-    public Timestamp getDataStartTime() {
-        return dataStartTime;
-    }
-
-    public String getDataTheme() {
-        return dataTheme;
-    }
-
-    public String getDataSize() {
-        return dataSize;
-    }
-
-    public String getBlockVersion() {
-        return blockVersion;
-    }
-
-    public String getDataBlockId() {
-        return dataBlockId;
-    }
-
-    public boolean isOnline() {
-        return isOnline;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setOwner(String owner) {
-        this.owner = owner;
+        this.owner = owner == null ? null : owner.trim();
     }
 
-    public void setDataStartTime(Timestamp dataStartTime) {
-        this.dataStartTime = dataStartTime;
+    public Date getDatastarttime() {
+        return datastarttime;
     }
 
-    public void setDataTheme(String dataTheme) {
-        this.dataTheme = dataTheme;
+    public void setDatastarttime(Date datastarttime) {
+        this.datastarttime = datastarttime;
     }
 
-    public void setDataSize(String dataSize) {
-        this.dataSize = dataSize;
+    public String getDatatheme() {
+        return datatheme;
     }
 
-    public void setBlockVersion(String blockVersion) {
-        this.blockVersion = blockVersion;
+    public void setDatatheme(String datatheme) {
+        this.datatheme = datatheme == null ? null : datatheme.trim();
     }
 
-    public void setDataBlockId(String dataBlockId) {
-        this.dataBlockId = dataBlockId;
+    public String getDatasize() {
+        return datasize;
     }
 
-    public void setOnline(boolean online) {
-        isOnline = online;
+    public void setDatasize(String datasize) {
+        this.datasize = datasize == null ? null : datasize.trim();
     }
 
+    public String getBlockversion() {
+        return blockversion;
+    }
 
+    public void setBlockversion(String blockversion) {
+        this.blockversion = blockversion == null ? null : blockversion.trim();
+    }
+
+    public String getDatainbloackid() {
+        return datainbloackid;
+    }
+
+    public void setDatainbloackid(String datainbloackid) {
+        this.datainbloackid = datainbloackid == null ? null : datainbloackid.trim();
+    }
+
+    public Boolean getIsonline() {
+        return isonline;
+    }
+
+    public void setIsonline(Boolean isonline) {
+        this.isonline = isonline;
+    }
 }
