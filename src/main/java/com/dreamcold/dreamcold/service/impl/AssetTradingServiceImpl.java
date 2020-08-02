@@ -5,10 +5,12 @@ import com.dreamcold.dreamcold.entity.AssetTrading;
 import com.dreamcold.dreamcold.mapper.AssetTradingMapper;
 import com.dreamcold.dreamcold.service.AssetTradingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 
+@Service
 public class AssetTradingServiceImpl implements AssetTradingService {
 
     @Autowired

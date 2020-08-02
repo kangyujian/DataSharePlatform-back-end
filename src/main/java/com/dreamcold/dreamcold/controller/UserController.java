@@ -15,28 +15,6 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/logins")
 public class UserController {
-
-    @Autowired
-    private UserMapper userMapper;
-
-
-    @ResponseBody
-    @RequestMapping("/users")
-    public User getUser(){
-        return  userMapper.selectByPrimaryKey(1);
-    }
-
-
-
-
-
-
-
-
-
-
-
 
 }

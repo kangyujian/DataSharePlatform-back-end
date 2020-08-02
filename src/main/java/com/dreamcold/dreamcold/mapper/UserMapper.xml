@@ -68,4 +68,10 @@
       PASSWORD = #{password,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectByUserName" parameterType="com.dreamcold.dreamcold.entity.User" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from users
+    where USERNAME = #{username,jdbcType=VARCHAR}
+  </select>
 </mapper>
