@@ -6,12 +6,11 @@ import java.util.List;
 
 public interface AssetStatusService {
 
-
-    public Boolean insertIntoAssetStatus();
+    public Boolean insertIntoAssetStatus(AssetStatus assetStatus);
 
     public List<AssetStatus> findAll();
 
-    public Boolean updateById();
+    public Boolean updateById(AssetStatus assetStatus);
 
-    public  Boolean deleteById();
+    public  Boolean deleteById(Integer id);
 }
