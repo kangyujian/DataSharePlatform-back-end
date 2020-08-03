@@ -103,4 +103,10 @@
       ISONLINE = #{isonline,jdbcType=BIT}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="findAll"  resultMap="BaseResultMap">
+    select
+        *
+    from assetpricing
+  </select>
 </mapper>

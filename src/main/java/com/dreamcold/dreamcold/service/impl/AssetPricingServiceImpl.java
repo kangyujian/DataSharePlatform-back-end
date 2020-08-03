@@ -10,25 +10,50 @@ import java.util.List;
 
 
 @Service
-public class AssetPricingServiceImpl implements AssetPricingService {
+public  class AssetPricingServiceImpl implements AssetPricingService {
+
 
     @Autowired
     private AssetPricingMapper assetPricingMapper;
 
-    public Boolean insertIntoAssetPricing(){
-        return  false;
+    public Boolean insertIntoAssetPricing(AssetPricing assetPricing){
+        if(!isNULL(assetPricing)){
+            return false;
+        }
+        assetPricingMapper.insert(assetPricing);
+        return true;
+    }
+
+    private  Boolean isNULL(AssetPricing assetPricing){
+        if(assetPricing.getIsonline()==null||assetPricing.getDatacheacker()==null||assetPricing.getDatapricedecidetime()==null
+                ||assetPricing.getDatasize()==null||assetPricing.getDatavalue()==null){
+            return false;
+        }
+        if(assetPricing.getDatacheacker().length()==0||assetPricing.getDatasize().length()==0||assetPricing.getDatasize().length()==0||
+                assetPricing.getDatasize().length()==0){
+            return false;
+        }
+        return  true;
     }
 
     public List<AssetPricing> findAll(){
-        return null;
+        return assetPricingMapper.findAll();
     }
 
-    public Boolean updateById(){
-        return false;
+    public Boolean updateById(AssetPricing assetPricing){
+        if(!isNULL(assetPricing)){
+            return false;
+        }
+        assetPricingMapper.updateByPrimaryKey(assetPricing);
+        return  true;
     }
 
-    public  Boolean deleteById(){
-        return false;
+    public  Boolean deleteById(Integer id){
+        if (assetPricingMapper.deleteByPrimaryKey(id)!=0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 

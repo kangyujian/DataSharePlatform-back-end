@@ -6,13 +6,9 @@ import java.util.List;
 
 public interface AssetPricingService {
 
-
-    public Boolean insertIntoAssetPricing();
-
-    public List<AssetPricing> findAll();
-
-    public Boolean updateById();
-
-    public  Boolean deleteById();
+    public Boolean insertIntoAssetPricing(AssetPricing assetPricing);
+    List<AssetPricing> findAll();
+    public Boolean updateById(AssetPricing assetPricing);
+    public  Boolean deleteById(Integer id);
 
 }
