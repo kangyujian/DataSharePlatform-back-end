@@ -35,9 +35,9 @@ public class AssetStatusServiceImpl implements AssetStatusService {
 
     @Override
     public Boolean insertIntoAssetStatus(AssetStatus assetStatus) {
-        if(!isNULL(assetStatus)){
-            return false;
-        }
+//        if(!isNULL(assetStatus)){
+//            return false;
+//        }
         if(assetStatusMapper.insert(assetStatus)!=0){
             return true;
         }else{

@@ -1,5 +1,7 @@
 package com.dreamcold.dreamcold.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class AssetPricing {
@@ -7,6 +9,7 @@ public class AssetPricing {
 
     private String datacheacker;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date datapricedecidetime;
 
     private String datasize;

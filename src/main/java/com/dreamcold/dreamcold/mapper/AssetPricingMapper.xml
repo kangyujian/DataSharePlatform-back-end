@@ -105,8 +105,8 @@
   </update>
 
   <select id="findAll"  resultMap="BaseResultMap">
-    select
-        *
-    from assetpricing
+  select
+    *
+  from assetpricing
   </select>
 </mapper>
